@@ -1,31 +1,33 @@
-import java.util.Scanner;
+import java.util.Arrays;
 
 public class Example2 {
 
 	public static void main(String[] args) {
-		
 		/*
-		 	사용자가 입력한 숫자에 맞춰 구구단이 작동되며
-		 	구구단 결과를 계산하여 짝수인지 홀수인지 출력하시오
+		 * 배열 + 기본 메소드 문제 product : 수박 참외 사과 배 딸기 키위 바나나 망고 중 참외 배 키위를 삭제하였습니다 해당 삭제 후
+		 * 배열을 다시 재리스트 하는 코드를 작성하시오 단 해당 처리사항은 모두 별도의 메소드에서 처리가 되어야 하며 반복문은 마음대로
 		 */
-		
-		Scanner sc = new Scanner(System.in);
-		int a = 0;
-		System.out.print("구구단에 대한 숫자를 입력하세요 :");
-		int b = sc.nextInt();
-		int sum = 0;
-		
-		for(int i=1; i<10;i++) {
-			sum +=b*i;
+
+		String arr[] = { "수박", "참외", "사과", "배", "딸기", "키위", "바나나", "망고" };
+		Example2 ex = new Example2();
+		ex.list(arr);
+	}
+
+	public void list(String[] list) {
+		int count = 0;
+		String[] tmp = new String[list.length];
+		for (int i = 0; i < list.length; i++) {
+			if (!(list[i].equals("참외") || list[i].equals("키위") || list[i].equals("배"))) {
+				tmp[count] = list[i];
+				count++;
+			}
 		}
-		System.out.println(sum);
-		if(sum%2 ==0) {
-			System.out.println("짝수입니다");
+		String result[] = new String[count];
+		for (int j = 0; j < result.length; j++) {
+			result[j] = tmp[j];
 		}
-		else {
-			System.out.println("홀수입니다");
-		}
-		
+
+		System.out.println(Arrays.toString(result));
 	}
 
 }
