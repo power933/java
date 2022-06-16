@@ -22,6 +22,8 @@ public class awt4_class {
 		f.add(closebtn);
 		f.add(btn);
 		f.add(lb);
+		
+		
 		closebtn.addActionListener(new ActionListener() {
 			
 			@Override
