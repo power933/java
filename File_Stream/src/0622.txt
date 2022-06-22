@@ -1,0 +1,5 @@
+String으로 선언시 String pool로 들어가나 new String사용시 pool밖에 힙영역에 생성되어 영역이 경우 ==가 먹지 않음
+string.intern() 
+String a = "1";
+String b = new String("1").intern();
+sysout(a==b) 가 성립됨
