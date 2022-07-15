@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="ie=edge, chrome=1">
+
+<title>JS 3일차 html + js 2(js13.html과 함께)</title>
+
+<script type="text/javascript">
+// 	var id = document.getElementById("mid");
+	
+function abc() {
+	if(frm.mid.value==""){
+		alert("아이디를 입력하세요");
+	}
+	else{
+		frm.submit();
+		
+		
+	}
+}
+	
+
+</script>
+
+<style type="text/css">
+
+.idclass{
+	width: 200px; height: 30px; border: 1px solid blue;
+	box-sizing: border-box;
+}
+.btm{
+	width: 80px; height: 30px;
+}	
+
+</style>
+
+</head>
+<body>
+
+<!-- get방식은 브라우저에 파라미터값을 이용하여 전송하는 형태 입니다.
+	단점 : 보안이 취약함.
+ -->
+<form id="frm" name = "frm" method="get" action="./js13.html">
+
+<input type = "text" id="mid" name="mid" class = "idclass">
+<input type = "button" value = "전송" class="btn" onclick="abc();">
+
+</form>
+
+</body>
+</html>
+
+
+
+
+
+
+

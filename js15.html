@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="ie=edge, chrome=1">
+<title>js 3일차 html + js(popup)</title>
+
+<script type="text/javascript">
+	//cors 발생 : 서로 다른 도메인 및 IP가 발생 할 경우
+	// corss-site, corss-domain 서버없이 해결법
+	function abc() {
+// 		opener.location.reload(); // 부모창 새로고침
+		
+// 		부모창에 있는 값을 자식창으로 가져오는 사항(id로 이용)
+
+		var z = opener.document.getElementById("mid").value;
+		alert(z);
+		
+		
+	}	
+
+</script>
+
+</head>
+<body>
+	<input type = "button" value = "데이터" onclick="abc();">
+	</form>
+</body>
+</html>

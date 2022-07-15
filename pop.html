@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="ie=edge, chrome=1">
+<title>팝업창 = js14.html</title>
+
+<script>
+	function popclose() {
+		self.close();
+	}
+	
+	function abc(addr) {
+		
+		//window.opener : 부모창을 지칭하게 됩니다.
+		window.opener.document.getElementById("address").value = addr;
+// 		self.close();
+	}
+
+
+</script>
+
+</head>
+<body>
+<a href="javascript:void abc('seoul');">서울 특별시 마포구 신촌로</a>
+<input type = "button" value="창닫기" onclick="popclose()">
+</body>
+</html>

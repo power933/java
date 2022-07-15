@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="ie=edge, chrome=1">
+<meta name ="viewport" content="width=device-width, initial-scale=1.0">
+<script src="http://192.168.100.209:8080/html2/js16.js"></script>
+<title> 간편회원가입 </title>
+
+<script type="text/javascript">
+	var aa;
+	function x(a) {
+		aa = a;
+	}
+	
+	function abc(s) {
+		if(s == ""){
+			alert("공란 ㄴㄴ");
+		}
+		else if(aa == "name"){
+			console.log(search(s));
+		}
+		else if(aa == "id"){
+			
+		}
+	
+
+	}
+	
+</script>
+
+</head>
+<body>
+
+<!-- onchange = option 에 대한 선택갑싱 변경되면 바로 해당함수를 호출
+	onchange = this(해당 태그에 대한 value값) -->
+	
+<form name = "fm" id = "fm"  action="">
+<select name="se" id="se" onchange="x(this.value)">
+	<option value = "">[선택]</option>
+	<option value = "name">이름</option>
+	<option value = "id">아이디</option>
+
+</select>
+
+<input type = "text" id = "input" name = "input" >
+<input type = "button" id = "btn" name = "btn" value="제출" onclick="abc(input.value)">
+</form>
+
+</body>
+</html>
