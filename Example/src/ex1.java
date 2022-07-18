@@ -1,7 +1,8 @@
 
 public class ex1 {
 	public static void main(String[] args) {
-		System.out.println("test");
+		String a = "ȫ�浿";
+		System.out.println(a);
 		
 		
 	}
