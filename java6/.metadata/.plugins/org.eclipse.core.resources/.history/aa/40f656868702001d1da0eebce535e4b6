@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+
+public class test {
+	
+	public static void main(String[] args) {
+		int arr[] = {1,2,3,4,5,6,7,8,9};
+		
+		
+	}
+}
+
+class odd implements Runnable{
+	int odd[];
+	ArrayList<Integer> even = new ArrayList<>();
+	public void odd(int arr[]) {
+		odd = arr;
+	}
+	
+	@Override
+	public void run() {
+		
+	}
+}
+
+
+class even implements Runnable{
+	
+}

@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class test extends ab{
+	@Override
+	public void choice() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("1: 사과 2: 딸기 3: 키위");
+		int a = sc.nextInt();
+		System.out.println("구매 갯수 입력");
+		int b = sc.nextInt();
+		
+	}
+	
+	@Override
+	public void cal() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+}
+
+abstract class ab{
+	public abstract void choice();
+	public abstract void cal();
+}

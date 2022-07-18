@@ -1,0 +1,22 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class test {
+	Scanner sc = new Scanner(System.in);
+	
+	test(){
+//		["사과=2000","딸기=1500","키위=2500"] 
+		System.out.println("해당 상품을 선택해 주세요 1:사과, 2.딸기 3.키위");
+		int a = sc.nextInt();
+		System.out.println("해당 상품 갯수를 입력해주세요");
+		int b = sc.nextInt();
+		System.out.println("장바구니를 종료하시겠습니까?");
+	}
+	
+	public static void main(String[] args) {
+		
+		
+		
+	}
+}
+

@@ -1,0 +1,59 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+
+class Solution {
+	public String solution(String[] participant, String[] completion) {
+
+		ArrayList<String> al1 = new ArrayList<>(Arrays.asList(participant));
+		ArrayList<String> al2 = new ArrayList<>(Arrays.asList(completion));
+		
+		String a = "";
+		try {
+			al1.removeAll(al2);
+			System.out.println(al1);
+			a = al1.get(0);
+		}
+
+		
+		catch (Exception e) {
+			int count = 0;
+			int count1 = 0;
+			String name = "";
+			for (int i = 0; i < participant.length; i++) {
+				for (int j = i; j < participant.length; j++) {
+					count = 0;
+					if (participant[i].equals(participant[j])) {
+						count++;
+					}
+					if (count > 1 && i == participant.length) {
+						name = participant[i];
+						for (int x = 0; x < completion.length; x++) {
+							if (completion[x].equals(name)) {
+								count1++;
+								if (count1 == count) {
+
+								} else {
+									a = name;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		
+
+		return a;
+	}
+
+	public static void main(String[] args) {
+
+		Solution s = new Solution();
+
+		String a[] = { "mislav", "stanko", "mislav", "ana" };
+		String b[] = { "stanko", "ana", "mislav" };
+		System.out.println(s.solution(a, b));
+
+	}
+
+}

@@ -1,0 +1,49 @@
+import java.util.ArrayList;
+
+public class test {
+	
+	public static void main(String[] args) {
+		int arr[] = {1,2,3,4,5,6,7,8,9};
+		Thread t = new Thread(new odd(arr));
+		t.start();
+		
+		
+	}
+}
+
+class odd implements Runnable{
+	int arr[];
+	ArrayList<Integer> odd = new ArrayList<>();
+	ArrayList<Integer> even = new ArrayList<>();
+	public odd(int arr[]) {
+		this.arr = arr;
+		
+		for(int i = 0; i<arr.length;i++) {
+			if(arr[i]%2 ==0) {
+				even.add(arr[i]);
+			}
+			else {
+				odd.add(arr[i]);
+			}
+		}
+	}
+	
+	@Override
+	public void run() {
+		System.out.println(odd);
+		Thread t1 = new Thread(new even(even));
+		t1.start();
+	}
+}
+
+
+class even implements Runnable{
+	ArrayList<Integer> even = new ArrayList<>();
+	public even(ArrayList<Integer> even) {
+		this.even = even;
+	}
+	@Override
+	public void run() {
+		System.out.println(even);
+	}
+}

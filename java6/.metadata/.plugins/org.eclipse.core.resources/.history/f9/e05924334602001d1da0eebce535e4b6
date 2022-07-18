@@ -1,0 +1,37 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+
+class Solution {
+	public String solution(String[] participant, String[] completion) {
+
+		for(int i = 0; i<participant.length;i++) {
+			for(int j = 0; j<completion.length;j++) {
+				if(participant[i].equals(completion[j])) {
+					participant[i] = "0";
+				}
+			}
+			
+		}
+		String a = "";
+		System.out.println(Arrays.toString(participant));
+		for(int i = 0; i<participant.length;i++) {
+			
+			if(participant[i] != "0") {
+				a = participant[i];
+			}
+		}
+		
+		return a;
+	}
+
+	public static void main(String[] args) {
+
+		Solution s = new Solution();
+
+		String a[] = { "mislav", "stanko", "mislav", "ana" };
+		String b[] = { "stanko", "ana", "mislav" };
+		System.out.println(s.solution(a, b));
+
+	}
+
+}

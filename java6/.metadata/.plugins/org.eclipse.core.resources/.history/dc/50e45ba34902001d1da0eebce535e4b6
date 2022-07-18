@@ -1,0 +1,23 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+
+class Solution {
+	public String solution(String[] participant, String[] completion) {
+
+		
+		
+		String a = "";
+		return a;
+	}
+
+	public static void main(String[] args) {
+
+		Solution s = new Solution();
+
+		String a[] = { "mislav", "stanko", "mislav", "ana" };
+		String b[] = { "stanko", "ana", "mislav" };
+		System.out.println(s.solution(a, b));
+
+	}
+
+}
